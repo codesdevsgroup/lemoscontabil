@@ -1,75 +1,357 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="" />
 
-  <title>Lemos Contabilidade</title>
+    <title>Lemos Contabil</title>
 
-  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-  <link rel="stylesheet" href="./assets/css/responsive.css" type="text/css">
-</head>
-<body>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
 
-  <header>
-    <nav>
-      <div class="container">
-        <ul class="d-flex">
-            <li><a href="#"><img src="./assets/img/logo.png" alt="logo"></a></li>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Contatos</a></li>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/bootstrap-custom.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header
+      id="navigation"
+      x-data="{ sticky: false }"
+      :class="{'sticky': sticky}"
+    >
+      <nav
+        class="d-flex container justify-content-between align-items-center position-relative"
+      >
+        <a href="#home">
+          <img
+            src="./assets/img/logo.webp"
+            alt="logo movisolar"
+            class="img-fluid"
+          />
+        </a>
+        <ul class="d-flex nav-list menu">
+          <li><a href="#home" class="active home">Início</a></li>
+          <li><a href="#service" class="service">Serviços</a></li>
+          <li><a href="#product" class="about">Sobre nós</a></li>
+          <li><a href="#contact" class="contact">Contatos</a></li>
         </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home">
-      <div class="container">
-        <h2>LEMOS CONTABILIDADE</h2>
-        <h1>Procurando um escritório <br>de contabilidade? <br>Nós podemos te ajudar!</h1>
-        <p>O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo</p>
-        <a href="#"><button class="btn btn-primary">Entre em contato!</button></a>
-      </div>
-    </section>
-
-    <section id="validation">
-      <div class="container">
-        <h2 class="text-center">Na Lemos, você</h2>
-        <div class="d-flex ">
-          <div>
-            <h5>Economiza nós impostos</h5>
-            <p>Realizamos todo o processo de redução de impostos com o planejamento tributário da sua empresa.</p>
-          </div>
-          <div>
-            <h5>Para de perder tempo com burocracia</h5>
-            <p>Todo o processo burocrático não fará mais parte da sua rotina, pode deixar, que nós resolvemos tudo</p>
-          </div>
-          <div>
-            <h5>Aumenta seu faturamento</h5>
-            <p>Construímos a estratégia perfeita para te levar ao topo.</p>
+        <a class="button-header d-none" href="#">
+          <button class="btn btn-red">Entre em contato</button>
+        </a>
+        <div class="mobile-options" x-data="{ open: false }">
+          <svg
+            x-on:click="open = true"
+            width="31"
+            height="22"
+            viewBox="0 0 31 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1H30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1 10.7385H30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1 20.4771H30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="nav-list-mobile" :class="{'open': open}">
+            <div class="nav-list-mobile-header menu">
+              <svg
+                x-on:click="open = false"
+                width="40"
+                height="43"
+                viewBox="0 0 40 43"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M33.3333 21.5929L6.66659 21.5929M6.66659 21.5929L18.3333 33.7637M6.66659 21.5929L18.3333 9.42203"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="d-flex flex-column nav-list-mobile-body">
+              <li><a href="#home" class="active home">Início</a></li>
+              <li><a href="#service" class="service">Serviços</a></li>
+              <li><a href="#product" class="about">Sobre nós</a></li>
+              <li><a href="#contact" class="contact">Contatos</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="referency">
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div class="bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-7">
+                <h4 class="mar-b-4">LEMOS CONTABILIDADE</h4>
+                <h1 class="mar-b-6">
+                  A chave para um futuro <br />
+                  financeiro brilhante
+                </h1>
+                <p class="mar-b-8">
+                  Serviço contábil confiável e eficiente para <br />
+                  garantir o sucesso financeiro do seu negócio.
+                </p>
+                <a class="" href="#">
+                  <button class="btn btn-red">Entre em contato</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="service">
+        <div class="container">
+          <div class="validadtion-number">
+            <div class="number">
+              <h3>+10</h3>
+              <p>Anos de mercado</p>
+            </div>
+            <div class="number">
+              <h3>+80</h3>
+              <p>Empresas Parceiras</p>
+            </div>
+            <div class="number">
+              <h3>+10</h3>
+              <p>De sadisfação</p>
+            </div>
+          </div>
+          <div class="why-lemos">
+            <h2>Por que escolher a Lemos?</h2>
+            <div class="d-flex">
+              <div>
+                <img
+                  src="./assets/img/icone-mapa-do-brasil.webp"
+                  alt="mapa do Brasil"
+                />
+                <h4>Cobertura nacional</h4>
+                <p>
+                  Não importa onde você esteja no Brasil, nós estaremos aqui
+                  para te atender!
+                </p>
+              </div>
+              <div>
+                <img src="./assets/img/icone-equipe.webp" alt="equipe" />
+                <h4>Equipe especializada</h4>
+                <p>
+                  Nós somos especialistas em contabilidade tributária e estamos
+                  prontos para ajudar seu negócio.
+                </p>
+              </div>
+              <div>
+                <img src="./assets/img/icone-personalizada.webp" alt="equipe" />
+                <h4>Personalização</h4>
+                <p>
+                  Aqui, o seu negócio é único e especial! Por isso, oferecemos
+                  um trabalho totalmente personalizado.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="services">
+            <h2>Conheça nossos serviços</h2>
+            <div class="cards">
+              <div class="card">
+                <img src="./assets/img/icone-calculadora.webp" alt="" />
+                <h5>Contabilidade tributária</h5>
+                <p>
+                  Podemos ajudar a reduzir seus gastos a médio e longo prazo por
+                  meio de uma análise cuidadosa dos dados e métricas do seu
+                  negócio para identificar oportunidades de redução de impostos.
+                </p>
+              </div>
+              <div class="card">
+                <img src="./assets/img/icone-predios.webp" alt="" />
+                <h5>Regularização de empresas</h5>
+                <p>
+                  Com a nossa assessoria especializada, podemos ajudar a
+                  regularizar a sua empresa de acordo com as últimas
+                  atualizações do governo. Vamos trabalhar juntos para deixar
+                  tudo em ordem.
+                </p>
+              </div>
+              <div class="card">
+                <img src="./assets/img/icone-mala.webp" alt="" />
+                <h5>Organização trabalhista e previdenciária</h5>
+                <p>
+                  Fazemos a organização trabalhista e previdenciária que é
+                  fundamental para garantir a segurança e o bem-estar dos
+                  trabalhadores e das empresas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="banner">
+        <div class="container">
+          <div class="d-flex">
+            <img src="./assets/img/logo.webp" alt="" />
+            <div class="d-flex align-items-center">
+              <h3 class="mar-b-5">Para de perder tempo com burocracia</h3>
+              <p>
+                Todo o processo burocrático não fará mais parte da sua rotina,
+                pode deixar, que nós resolvemos tudo
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <div class="partners">
+            <h2>Empresas Parceiras</h2>
+            <div class="d-flex justify-content-between">
+              <img src="./assets/img/logo-ipsum.png" alt="" />
+              <img src="./assets/img/logo-ipsum.png" alt="" />
+              <img src="./assets/img/logo-ipsum.png" alt="" />
+              <img src="./assets/img/logo-ipsum.png" alt="" />
+            </div>
+          </div>
+          <div class="history">
+            <div>
+              <img
+                src="./assets/img/homens-sentados-com-laptop-trabalhando.webp"
+                alt=""
+                class="img-fluid"
+              />
+              <div class="texts">
+                <h2>Nossa Historia</h2>
+                <p>
+                  No ano de 1993, Rafael Lemos da Silva Filho, que havia acabado
+                  de retornar de São Paulo onde passou alguns anos trabalhando
+                  na área contábil, abriu as portas de seu próprio escritório no
+                  centro de Guanhães. O rapaz até então ambicionava um salário
+                  modesto que pudesse sustentar a família que estava na
+                  iminência de formar, afinal ele se casaria ainda no final
+                  desse mesmo ano. Munido de um sonho, um diploma, uma
+                  secretária que era também sua noiva e uma mesa de escritório
+                  emprestada ele iniciou sua jornada como empresário. Os anos
+                  foram se passando e as bênçãos de Deus se multiplicando sobre
+                  o escritório e a família, os filhos aumentaram, a equipe de
+                  trabalho e os clientes mais ainda. Lucas Lemos, nascido em
+                  1994, o primogênito, cresceu no meio contábil e se apaixonou
+                  pela profissão, iniciando ainda jovem sua carreira como
+                  sucessor de Rafael, hoje é técnico em Contabilidade, bacharel
+                  em Ciências Contábeis e diretor da empresa.
+                  <br />
+                  Somos hoje referência em serviços contábeis em Guanhães e
+                  região, pois juntamos a experiência e uma equipe extremamente
+                  competente à inovações tecnológicas para otimizar a resolução
+                  de demandas e problemas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-5">
+              <h2>
+                <span>Entre em contato</span><br />
+                com a nossa equipe!
+              </h2>
+              <p>
+                Entre em contato e diminua a burocracia e facilite o dia a dia
+                da sua empresa!
+              </p>
+              <ul>
+                <li>
+                  <img src="" alt="" />
+                  <span>Telefones: (33) 3421-2719/ (33)9 8812-2200</span>
+                </li>
+                <li>
+                  <img src="" alt="" />
+                  <span>E-mail: contato@lemoscontabil.com</span>
+                </li>
+                <li>
+                  <img src="" alt="" />
+                  <span
+                    >Endereço: Praça Cônego Cesario, 231 - LOJA 01 - Guanhães,
+                    MG, 39740-000.</span
+                  >
+                </li>
+              </ul>
+              <a class="" href="#">
+                <button class="btn btn-red">
+                  <img src="" alt="" />
+                  Entre em contato
+                </button>
+              </a>
+            </div>
+            <div class="col-7">
+              <img src="" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
       <div class="container">
-        
+        <div class="d-flex">
+          <img src="" alt="" />
+          <ul></ul>
+          <ul></ul>
+        </div>
       </div>
-    </section>
-  </main>
-  
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/bootstrap.bundle.min.js.map"></script>
-</body>
+    </footer>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/slick-1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+  </body>
 </html>

@@ -7,6 +7,7 @@
 
 :root {
   --font-default: 'Montserrat', sans-serif;
+  --font-paragraph: 'Inter', sans-serif;
 }
 
 html {
@@ -62,6 +63,7 @@ p {
   line-height: 24px;
   color: #000000;
   margin-bottom: 0;
+  font-family: var(--font-paragraph);
 }
 
 h1 {
@@ -225,6 +227,92 @@ h2 {
 #home h4,
 #home p {
   color: white;
+}
+
+#service .validadtion-number {
+  background-color: #75151b;
+  padding-block: 40px;
+}
+
+#service .validadtion-number h3 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 78px;
+  color: white;
+}
+
+#service .validadtion-number p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+
+#service .validadtion-number .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#service .why-lemos {
+  padding-block: 120px;
+}
+
+#service .why-lemos .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+#service .why-lemos .card {
+  align-items: center;
+  border: none;
+}
+
+#service .why-lemos .card h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #75151b;
+}
+
+#service .why-lemos .card p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+#service .services {
+  padding-block: 70px 100px;
+}
+
+#service .services .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+}
+
+#service .services .card {
+  padding: 76px 16px;
+  background-color: #75151b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+#service .services .card h5 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+}
+
+#service .services .card p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive */

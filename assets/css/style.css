@@ -315,6 +315,61 @@ h2 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+#banner {
+  display: flex;
+  align-items: center;
+  height: 332px;
+  background-image: url(../img/bg-banner.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#banner .container {
+  padding-inline: 90px;
+}
+
+#banner h3 {
+  font-family: var(--font-paragraph);
+  font-weight: 500;
+  font-size: 41.6311px;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+#banner p {
+  font-family: var(--font-paragraph);
+  font-weight: 400;
+  font-size: 26.0194px;
+  line-height: 31px;
+  color: #ffffff;
+}
+
+#about {
+  padding-block: 80px 120px;
+}
+
+#about .partners {
+  margin-bottom: 190px;
+}
+
+#about .history {
+  display: flex;
+}
+
+#about .partners h2,
+#about .history h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #75151b;
+}
+
+#about .history p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1366px) {

@@ -353,8 +353,14 @@ h2 {
   margin-bottom: 190px;
 }
 
-#about .history {
+#about .history .container {
   display: flex;
+  align-items: flex-start;
+}
+
+#about .history-mobile,
+#about .img-mobile {
+  display: none;
 }
 
 #about .partners h2,
@@ -408,9 +414,19 @@ h2 {
   color: #413e3e;
 }
 
-#contact > img {
+#contact .image {
   position: absolute;
   right: 0;
+}
+
+#contact .bg {
+  position: absolute;
+  width: 600px;
+  height: 370px;
+  background: #75151b;
+  border-radius: 100px 0px 0px 100px;
+  right: 0;
+  margin-top: 60px;
 }
 
 #footer {
@@ -432,6 +448,11 @@ h2 {
   right: 0;
 }
 
+#footer .social li {
+  display: flex;
+  align-items: center;
+}
+
 #footer ul li a {
   font-weight: 600;
   font-size: 16px;
@@ -440,6 +461,15 @@ h2 {
 }
 
 /* Responsive */
+
+@media screen and (min-width: 1600px) {
+  #contact .bg {
+    width: 40vw;
+  }
+  #contact .image {
+    right: 10%;
+  }
+}
 
 @media screen and (max-width: 1366px) {
 }
@@ -471,7 +501,7 @@ h2 {
   }
   .nav-list-mobile {
     width: 266px;
-    background: white;
+    background: #75151b;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -490,6 +520,11 @@ h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 38px;
   }
+
+  .nav-list-mobile-header svg {
+    transform: rotate(180deg);
+  }
+
   .nav-list-mobile-body .sub-nav-list .open {
     display: flex !important;
     flex-direction: column;
@@ -513,10 +548,265 @@ h2 {
   #navigation .nav-list-mobile-body li:hover::before {
     opacity: 1;
   }
+
+  h1 {
+    font-size: 40px;
+    line-height: 49px;
+  }
+
+  #home h1 br {
+    display: none;
+  }
+
+  #home h4 {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  #service .validadtion-number h3 {
+    font-weight: 700;
+    font-size: 24.2492px;
+    line-height: 36px;
+  }
+
+  #service .validadtion-number p {
+    font-weight: 700;
+    font-size: 16.9745px;
+    line-height: 19px;
+  }
+
+  #service .why-lemos {
+    padding-block: 70px;
+  }
+
+  #service .why-lemos h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  #service .why-lemos .cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  #service .why-lemos .card {
+    width: 400px;
+  }
+
+  #service .why-lemos .card h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #service .services {
+    padding-block: 0 100px;
+  }
+
+  #service .services .cards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+  }
+
+  #service .services .card {
+    width: 400px;
+  }
+
+  #banner {
+    height: 230px;
+  }
+
+  #banner .container {
+    padding-inline: 0;
+  }
+
+  #banner .container > .d-flex {
+    position: relative;
+    justify-content: center;
+  }
+
+  #banner .image {
+    position: absolute;
+    opacity: 0.1;
+    height: 100%;
+  }
+
+  #banner h3 {
+    font-size: 32px;
+    line-height: 39px;
+  }
+
+  #banner p {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  #about {
+    padding-block: 100px 90px;
+  }
+
+  #about .partners {
+    margin-bottom: 100px;
+  }
+
+  #about .history {
+    display: none;
+  }
+
+  #about .img-mobile {
+    display: block;
+  }
+
+  #about .history-mobile {
+    display: initial;
+  }
+
+  #about .history-mobile .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about .history-mobile .texts .hide {
+    display: none;
+  }
+
+  #about .history-mobile .texts {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .history-mobile .texts h2 {
+    font-size: 28px;
+    line-height: 34px;
+    color: #75151b;
+    font-weight: 700;
+  }
+
+  #about .history-mobile .texts h2.mar-b-8 {
+    margin-bottom: 20px;
+  }
+
+  #about .history-mobile .texts p {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  #about .history-mobile .texts button {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    color: #75151b;
+    border: none;
+    background-color: transparent;
+  }
+
+  #contact {
+    padding-block: 0 100px;
+    flex-direction: column;
+  }
+
+  #contact .bg {
+    position: initial;
+    width: 80%;
+    align-self: end;
+    margin-top: 80px;
+  }
+
+  #contact .image {
+    bottom: 100px;
+    right: 15%;
+  }
+
+  #footer {
+    padding-block: 140px 70px;
+  }
+
+  #footer .image {
+    top: -100px;
+  }
+
+  #footer .social {
+    top: -90px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  #navigation nav > a img {
-    width: 150px;
+  h1 {
+    font-size: 35px;
+    line-height: 49px;
+  }
+
+  #home h4 {
+    text-align: center;
+  }
+
+  #home p br {
+    display: none;
+  }
+
+  #service .validadtion-number .number {
+    width: 33%;
+  }
+
+  #service .validadtion-number p,
+  #service .validadtion-number h3 {
+    text-align: center;
+  }
+
+  #service .validadtion-number p {
+    font-size: 16px;
+  }
+
+  #service .why-lemos .card {
+    width: 253px;
+  }
+
+  #service .services .card {
+    width: 310px;
+  }
+
+  #about .partners .container > .d-flex {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  #contact h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  #contact .image {
+    right: initial;
+    left: 22%;
+    width: 290px;
+  }
+
+  #contact .bg {
+    height: 240px;
+    width: 90%;
+    border-radius: 66.0312px 0px 0px 66.0312px;
+  }
+
+  #footer .image {
+    width: 186px;
+  }
+
+  #footer .social li.mar-e-6 {
+    margin-right: 20px;
+  }
+
+  #footer .social li a {
+    font-size: 16px;
+  }
+
+  #footer .menu .mar-e-5 {
+    margin-right: 12px;
   }
 }

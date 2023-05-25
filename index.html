@@ -131,7 +131,7 @@
         <div class="bg">
           <div class="container">
             <div class="row">
-              <div class="col-7">
+              <div class="col-xl-7 col-lg-8">
                 <h4 class="mar-b-4">LEMOS CONTABILIDADE</h4>
                 <h1 class="mar-b-6">
                   A chave para um futuro <br />
@@ -268,8 +268,12 @@
       </section>
       <section id="banner">
         <div class="container">
-          <div class="d-flex">
-            <img src="./assets/img/big-logo.webp" alt="" class="mar-e-8" />
+          <div class="d-flex align-items-center">
+            <img
+              src="./assets/img/big-logo.webp"
+              alt=""
+              class="mar-e-8 image"
+            />
             <div class="d-flex align-items-center flex-column">
               <h3 class="text-center mar-b-5">
                 Para de perder tempo com burocracia
@@ -283,8 +287,8 @@
         </div>
       </section>
       <section id="about">
-        <div class="container">
-          <div class="partners">
+        <div class="partners">
+          <div class="container">
             <h2 class="text-center mar-b-18">Empresas Parceiras</h2>
             <div class="d-flex justify-content-between">
               <img src="./assets/img/logo-ipsum.png" alt="" />
@@ -293,7 +297,9 @@
               <img src="./assets/img/logo-ipsum.png" alt="" />
             </div>
           </div>
-          <div class="history">
+        </div>
+        <div class="history">
+          <div class="container">
             <img
               src="./assets/img/homens-sentados-com-laptop-trabalhando.webp"
               alt=""
@@ -327,11 +333,60 @@
             </div>
           </div>
         </div>
+        <img
+          src="./assets/img/pessoas-sentadas-com-laptop-trabalhando-em-reuniao.webp"
+          alt=""
+          class="img-fluid img-mobile"
+        />
+        <div class="history-mobile">
+          <div class="container">
+            <div class="texts" x-data="{ hide: false }">
+              <h2 class="mar-b-8">Sobre nós</h2>
+              <p class="small-text" :class="{'hide': hide}">
+                No ano de 1993, Rafael Lemos da Silva Filho, que havia acabado
+                de retornar de São Paulo onde passou alguns anos trabalhando na
+                área contábil, abriu as portas de seu próprio escritório no
+                centro de Guanhães. O rapaz até então ambicionava um salário
+                modesto que pudesse sustentar a família que estava na iminência
+                de formar, afinal ele se casaria ainda no final desse mesmo ano.
+              </p>
+              <p class="full-text" :class="{'hide': !hide}">
+                No ano de 1993, Rafael Lemos da Silva Filho, que havia acabado
+                de retornar de São Paulo onde passou alguns anos trabalhando na
+                área contábil, abriu as portas de seu próprio escritório no
+                centro de Guanhães. O rapaz até então ambicionava um salário
+                modesto que pudesse sustentar a família que estava na iminência
+                de formar, afinal ele se casaria ainda no final desse mesmo ano.
+                Munido de um sonho, um diploma, uma secretária que era também
+                sua noiva e uma mesa de escritório emprestada ele iniciou sua
+                jornada como empresário. Os anos foram se passando e as bênçãos
+                de Deus se multiplicando sobre o escritório e a família, os
+                filhos aumentaram, a equipe de trabalho e os clientes mais
+                ainda. Lucas Lemos, nascido em 1994, o primogênito, cresceu no
+                meio contábil e se apaixonou pela profissão, iniciando ainda
+                jovem sua carreira como sucessor de Rafael, hoje é técnico em
+                Contabilidade, bacharel em Ciências Contábeis e diretor da
+                empresa.
+                <br />
+                Somos hoje referência em serviços contábeis em Guanhães e
+                região, pois juntamos a experiência e uma equipe extremamente
+                competente à inovações tecnológicas para otimizar a resolução de
+                demandas e problemas.
+              </p>
+              <button x-on:click="hide = !hide" :class="{'hide': hide}">
+                Ler mais
+              </button>
+              <button x-on:click="hide = !hide" :class="{'hide': !hide}">
+                Ler menos
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="contact">
         <div class="container">
           <div class="row">
-            <div class="col-5">
+            <div class="col-12 col-xl-5">
               <h2 class="mar-b-5">
                 <span>Entre em contato</span><br />
                 com a nossa equipe!
@@ -385,10 +440,11 @@
             </div> -->
           </div>
         </div>
+        <div class="bg"></div>
         <img
           src="./assets/img/img-contato.webp"
           alt="Homem com um celular sorrindo em um fundo vermelho"
-          class="img-fluid"
+          class="img-fluid image"
         />
       </section>
     </main>
@@ -396,7 +452,7 @@
       <div class="container">
         <div class="d-flex justify-content-center align-items-center">
           <img src="./assets/img/logo-footer.webp" alt="" class="image" />
-          <ul class="d-flex">
+          <ul class="d-flex menu">
             <li class="mar-e-5"><a href="#home" class="home">Início</a></li>
             <li class="mar-e-5">
               <a href="#service" class="service">Serviços</a>

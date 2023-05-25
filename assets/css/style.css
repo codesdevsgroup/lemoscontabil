@@ -370,6 +370,49 @@ h2 {
   line-height: 30px;
 }
 
+#contact {
+  padding-block: 80px 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#contact h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #413e3e;
+}
+
+#contact h2 span {
+  color: #75151b;
+}
+
+#contact p {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #413e3e;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li span {
+  font-family: var(--font-paragraph);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #413e3e;
+}
+
+#contact > img {
+  position: absolute;
+  right: 0;
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1366px) {

@@ -24,6 +24,7 @@ body {
 body {
   font-family: var(--font-default);
   overflow: overlay;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
